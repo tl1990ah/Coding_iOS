@@ -12,4 +12,6 @@
 
 - (NSString *)sha1Str;
 
+- (NSDate *)dateWithStr;
+
 @end

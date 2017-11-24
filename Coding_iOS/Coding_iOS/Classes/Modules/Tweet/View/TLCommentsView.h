@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class TLCommentsFrame;
+
 @interface TLCommentsView : UIView
+
+@property (nonatomic, strong) TLCommentsFrame *commentsFrame;
 
 @end

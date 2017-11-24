@@ -18,6 +18,11 @@
 		FE2E4A411FC513EE00DDC01A /* TLMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2E4A401FC513EE00DDC01A /* TLMessageViewController.m */; };
 		FE2E4A441FC5140800DDC01A /* TLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2E4A431FC5140800DDC01A /* TLMeViewController.m */; };
 		FE2E4A481FC5168D00DDC01A /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2E4A471FC5165300DDC01A /* UIImage+Extension.m */; };
+		FE51D3581FC7B19900BF53D2 /* TLTweetPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE51D3571FC7B19900BF53D2 /* TLTweetPhotosView.m */; };
+		FE51D35C1FC7C71500BF53D2 /* TLTweetDetailViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FE51D35B1FC7C71500BF53D2 /* TLTweetDetailViewFrame.m */; };
+		FE51D35F1FC7EF0300BF53D2 /* TLTweetFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FE51D35E1FC7EF0300BF53D2 /* TLTweetFrame.m */; };
+		FE51D3621FC7F1C100BF53D2 /* TLCommentsFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FE51D3611FC7F1C100BF53D2 /* TLCommentsFrame.m */; };
+		FE51D3651FC81C5700BF53D2 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE51D3641FC81C5700BF53D2 /* NSDate+Extension.m */; };
 		FE57712A1FC4196500C77520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5771281FC4196500C77520 /* Main.storyboard */; };
 		FE57712C1FC4196500C77520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE57712B1FC4196500C77520 /* Assets.xcassets */; };
 		FE57712F1FC4196500C77520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE57712D1FC4196500C77520 /* LaunchScreen.storyboard */; };
@@ -92,6 +97,16 @@
 		FE2E4A431FC5140800DDC01A /* TLMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLMeViewController.m; sourceTree = "<group>"; };
 		FE2E4A461FC5165300DDC01A /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		FE2E4A471FC5165300DDC01A /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		FE51D3561FC7B19900BF53D2 /* TLTweetPhotosView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTweetPhotosView.h; sourceTree = "<group>"; };
+		FE51D3571FC7B19900BF53D2 /* TLTweetPhotosView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTweetPhotosView.m; sourceTree = "<group>"; };
+		FE51D35A1FC7C71500BF53D2 /* TLTweetDetailViewFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTweetDetailViewFrame.h; sourceTree = "<group>"; };
+		FE51D35B1FC7C71500BF53D2 /* TLTweetDetailViewFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTweetDetailViewFrame.m; sourceTree = "<group>"; };
+		FE51D35D1FC7EF0300BF53D2 /* TLTweetFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTweetFrame.h; sourceTree = "<group>"; };
+		FE51D35E1FC7EF0300BF53D2 /* TLTweetFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTweetFrame.m; sourceTree = "<group>"; };
+		FE51D3601FC7F1C100BF53D2 /* TLCommentsFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCommentsFrame.h; sourceTree = "<group>"; };
+		FE51D3611FC7F1C100BF53D2 /* TLCommentsFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCommentsFrame.m; sourceTree = "<group>"; };
+		FE51D3631FC81C5700BF53D2 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		FE51D3641FC81C5700BF53D2 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		FE57711F1FC4196500C77520 /* Coding_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coding_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5771291FC4196500C77520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE57712B1FC4196500C77520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -340,6 +355,7 @@
 		FE2E4A1D1FC5119000DDC01A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE51D3591FC7C6D200BF53D2 /* Frame */,
 				FE6927171FC679FB009A177E /* TLTweet.h */,
 				FE6927181FC679FB009A177E /* TLTweet.m */,
 				FE69271D1FC699A4009A177E /* TLBanner.h */,
@@ -369,6 +385,8 @@
 				FE6927301FC6CC8F009A177E /* TLTweetDetailView.m */,
 				FE6927321FC6CCBC009A177E /* TLCommentsView.h */,
 				FE6927331FC6CCBC009A177E /* TLCommentsView.m */,
+				FE51D3561FC7B19900BF53D2 /* TLTweetPhotosView.h */,
+				FE51D3571FC7B19900BF53D2 /* TLTweetPhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +520,8 @@
 		FE2E4A451FC5161A00DDC01A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FE51D3631FC81C5700BF53D2 /* NSDate+Extension.h */,
+				FE51D3641FC81C5700BF53D2 /* NSDate+Extension.m */,
 				FE6BB0F01FC54C8300474E95 /* UIBarButtonItem+Extension.h */,
 				FE6BB0F11FC54C8300474E95 /* UIBarButtonItem+Extension.m */,
 				FE6BB0EB1FC54AE300474E95 /* UIView+Extension.h */,
@@ -514,6 +534,19 @@
 				FE6BB10A1FC57F6900474E95 /* NSString+TL.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		FE51D3591FC7C6D200BF53D2 /* Frame */ = {
+			isa = PBXGroup;
+			children = (
+				FE51D35A1FC7C71500BF53D2 /* TLTweetDetailViewFrame.h */,
+				FE51D35B1FC7C71500BF53D2 /* TLTweetDetailViewFrame.m */,
+				FE51D35D1FC7EF0300BF53D2 /* TLTweetFrame.h */,
+				FE51D35E1FC7EF0300BF53D2 /* TLTweetFrame.m */,
+				FE51D3601FC7F1C100BF53D2 /* TLCommentsFrame.h */,
+				FE51D3611FC7F1C100BF53D2 /* TLCommentsFrame.m */,
+			);
+			path = Frame;
 			sourceTree = "<group>";
 		};
 		FE5771161FC4196500C77520 = {
@@ -860,9 +893,12 @@
 				FE6927251FC6AE5A009A177E /* TLBannerTitleView.m in Sources */,
 				FE6927311FC6CC8F009A177E /* TLTweetDetailView.m in Sources */,
 				FE69271F1FC699A4009A177E /* TLBanner.m in Sources */,
+				FE51D3651FC81C5700BF53D2 /* NSDate+Extension.m in Sources */,
 				FE6927221FC6A5B4009A177E /* TLBannerPageView.m in Sources */,
+				FE51D35F1FC7EF0300BF53D2 /* TLTweetFrame.m in Sources */,
 				FE2E4A411FC513EE00DDC01A /* TLMessageViewController.m in Sources */,
 				FE2E4A3E1FC513D600DDC01A /* TLTweetViewController.m in Sources */,
+				FE51D35C1FC7C71500BF53D2 /* TLTweetDetailViewFrame.m in Sources */,
 				FE6BB1081FC57C8A00474E95 /* TLHttpTool.m in Sources */,
 				FE2E4A331FC511E800DDC01A /* TLNavigationViewController.m in Sources */,
 				FE69271C1FC69870009A177E /* TLBannerView.m in Sources */,
@@ -874,6 +910,7 @@
 				FE6BB0EA1FC54A8E00474E95 /* UIColor+Extension.m in Sources */,
 				FE2E4A441FC5140800DDC01A /* TLMeViewController.m in Sources */,
 				FE6BB0F51FC54CFA00474E95 /* TLLoginViewController.m in Sources */,
+				FE51D3621FC7F1C100BF53D2 /* TLCommentsFrame.m in Sources */,
 				FE6927161FC676B2009A177E /* TLTweetCell.m in Sources */,
 				FE69270D1FC661F9009A177E /* TLTweetSquareViewController.m in Sources */,
 				FE6BB10B1FC57F6900474E95 /* NSString+TL.m in Sources */,
@@ -883,6 +920,7 @@
 				FE6927191FC679FB009A177E /* TLTweet.m in Sources */,
 				FE6BB0FC1FC55E3600474E95 /* TLVerifyViewController.m in Sources */,
 				FE69272B1FC6C2C3009A177E /* TLComment.m in Sources */,
+				FE51D3581FC7B19900BF53D2 /* TLTweetPhotosView.m in Sources */,
 				FE6927131FC662B3009A177E /* TLHotTweetViewController.m in Sources */,
 				FE6927101FC6629A009A177E /* TLMomentsViewController.m in Sources */,
 				FE2E4A301FC511C800DDC01A /* TLBaseViewController.m in Sources */,

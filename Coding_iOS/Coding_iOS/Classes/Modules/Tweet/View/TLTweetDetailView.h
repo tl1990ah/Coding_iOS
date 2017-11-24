@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class TLTweetDetailViewFrame;
+
 @interface TLTweetDetailView : UIView
+
+@property (nonatomic, strong) TLTweetDetailViewFrame *detailFrame;
 
 @end

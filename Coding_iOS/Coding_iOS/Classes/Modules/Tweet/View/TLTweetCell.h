@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class TLTweetFrame;
+
 @interface TLTweetCell : UITableViewCell
+
+@property (nonatomic, strong) TLTweetFrame *tweetFrame;
 
 + (instancetype)createTweetCellWithTableView:(UITableView *)tableView;
 

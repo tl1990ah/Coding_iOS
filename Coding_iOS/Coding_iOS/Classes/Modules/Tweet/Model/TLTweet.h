@@ -18,7 +18,9 @@
 
 @property (nonatomic, strong) TLOwner *owner;
 
-@property (nonatomic, assign) NSInteger created_at;
+@property (nonatomic, copy) NSString *created_at;
+
+@property (nonatomic, copy) NSString *time;
 
 @property (nonatomic, assign) NSInteger sort_time;
 

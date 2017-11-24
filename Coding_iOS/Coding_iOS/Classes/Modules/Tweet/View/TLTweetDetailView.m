@@ -7,6 +7,10 @@
 //
 
 #import "TLTweetDetailView.h"
+#import "TLTweetDetailViewFrame.h"
+#import "TLTweetPhotosView.h"
+#import "TLTweet.h"
+#import "TLOwner.h"
 
 @interface TLTweetDetailView()
 
@@ -17,6 +21,8 @@
 @property (nonatomic, weak) UILabel *timeLabel;
 
 @property (nonatomic, weak) UILabel *contentLabel;
+
+@property (nonatomic, weak) TLTweetPhotosView *tweetPhotosView;
 
 @end
 
@@ -45,11 +51,54 @@
         
         UILabel *contentLabel = [[UILabel alloc] init];
         contentLabel.textColor = [UIColor blackColor];
+        contentLabel.numberOfLines = 0;
         contentLabel.font = [UIFont systemFontOfSize:12];
         [self addSubview:contentLabel];
         self.contentLabel = contentLabel;
+        
+        TLTweetPhotosView *tweetPhotosView = [[TLTweetPhotosView alloc] init];
+        tweetPhotosView.backgroundColor = [UIColor purpleColor];
+        [self addSubview:tweetPhotosView];
+        self.tweetPhotosView = tweetPhotosView;
     }
     return self;
+}
+
+- (void)setDetailFrame:(TLTweetDetailViewFrame *)detailFrame
+{
+    _detailFrame = detailFrame;
+    
+    self.frame = detailFrame.frame;
+    
+    // 取出冒泡数据
+    TLTweet *tweet = detailFrame.tweet;
+    // 取出用户数据
+    TLOwner *owner = tweet.owner;
+    
+    // 1. 头像
+    [self.headerIconView sd_setImageWithURL:[NSURL URLWithString:owner.avatar] placeholderImage:[UIImage originImageWithName:@"placeholder_monkey_round_40"]];
+    self.headerIconView.frame = detailFrame.iconFrame;
+    
+    // 2. 昵称
+    self.nameLabel.text = owner.name;
+    self.nameLabel.frame = detailFrame.nameFrame;
+    
+    // 3. 发布时间
+    NSDate *date = [tweet.created_at dateWithStr];
+    NSString *time = [date createTimeWithDate];
+    self.timeLabel.text = time;
+    CGFloat timeX = CGRectGetMinX(self.nameLabel.frame);
+    CGFloat timeY = CGRectGetMaxY(self.nameLabel.frame) + 15;
+    CGSize timeSize = [time boundingRectWithSize:CGSizeMake(100, CGFLOAT_MAX) options:NSStringDrawingTruncatesLastVisibleLine| NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:11]} context:nil].size;
+    self.timeLabel.frame = (CGRect){{timeX, timeY}, timeSize};
+    
+    // 4. 内容
+    self.contentLabel.text = tweet.content;
+    self.contentLabel.frame = detailFrame.contentFrame;
+    
+    // 5. 配图
+    self.tweetPhotosView.frame = detailFrame.photosFrame;
+    
 }
 
 @end

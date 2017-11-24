@@ -9,6 +9,7 @@
 #import "TLTweetCell.h"
 #import "TLTweetDetailView.h"
 #import "TLCommentsView.h"
+#import "TLTweetFrame.h"
 
 @interface TLTweetCell()
 
@@ -20,6 +21,15 @@
 
 @implementation TLTweetCell
 
+- (void)setTweetFrame:(TLTweetFrame *)tweetFrame
+{
+    _tweetFrame = tweetFrame;
+    
+    self.tweetDetailView.detailFrame = tweetFrame.tweetDetailViewFrame;
+    
+    self.commentsView.commentsFrame = tweetFrame.commentsFrame;
+}
+
 + (instancetype)createTweetCellWithTableView:(UITableView *)tableView
 {
     static NSString *Id = @"tweet";
@@ -28,6 +38,7 @@
         
         cell = [[TLTweetCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Id];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -38,15 +49,15 @@
         
         // 1. 添加冒泡详情
         TLTweetDetailView *tweetDetailView = [[TLTweetDetailView alloc] init];
-        tweetDetailView.frame = CGRectMake(0, 0, TLScreenW, 120);
-        tweetDetailView.backgroundColor = [UIColor orangeColor];
+        //tweetDetailView.frame = CGRectMake(0, 0, TLScreenW, 120);
+        tweetDetailView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:tweetDetailView];
         self.tweetDetailView = tweetDetailView;
         
         // 2. 添加评论
         TLCommentsView *commentsView = [[TLCommentsView alloc] init];
-        commentsView.backgroundColor = [UIColor purpleColor];
-        commentsView.frame = CGRectMake(0, 120, TLScreenW, 80);
+        commentsView.backgroundColor = [UIColor whiteColor];
+        //commentsView.frame = CGRectMake(0, 120, TLScreenW, 80);
         [self.contentView addSubview:commentsView];
         self.commentsView = commentsView;
         

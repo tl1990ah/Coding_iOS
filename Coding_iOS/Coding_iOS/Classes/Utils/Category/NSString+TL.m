@@ -28,4 +28,13 @@
     return output;
 }
 
+- (NSDate *)dateWithStr
+{
+    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
+    [inputFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"] ];
+    [inputFormatter setDateFormat:@"yyyyMMddHHmmss"];
+    NSDate *date = [inputFormatter dateFromString:self];
+    return date;
+}
+
 @end
